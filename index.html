@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Name</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            animation: gradientAnimation 5s infinite alternate;
+        }
+        
+       @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(135deg, #6a11cb, #2575fc);
+            }
+            33% {
+                background: linear-gradient(135deg, #56ab2f, #a8e063);
+            }
+            66% {
+                background: linear-gradient(135deg, #43cea2, #185a9d);
+            }
+            100% {
+                background: linear-gradient(135deg, #6a11cb, #2575fc);
+            }
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            width: 70%;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            margin-top: 0px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 1em;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #feb47b, #ff7e5f);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .welcome-message {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #fff;
+            text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(20px);
+            margin-bottom: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 0px;
+            background: black;
+            color: white;
+            margin: 0px;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+        #img-container {
+            height: 80%;
+            aspect-ratio: 1 / 1;
+            background-color: white;
+            border-radius: 3px;
+            margin: auto;
+            padding-top:10%;
+        }
+
+        #img-container img {
+            width: 80%;
+            height: 80%;
+            border-radius: 5px;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Gift Is:</h1>
+        <div id="img-container">
+            <img id="random-image" src="" alt="Random Gift Image">
+        </div>
+        <p class="welcome-message" id="welcomeMessage">Click Here To Get Gift!</p>
+        <button onclick="submitName()">Get Now</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 All Rights Reserved.</p>
+    </footer>
+    <script>
+    
+            const randomNumber = Math.floor(Math.random() * 18) + 1;
+            const imagePath = randomNumber + '.png';
+            console.log(imagePath)
+            document.getElementById('random-image').src = imagePath;
+        function submitName() {
+            window.location.href = "https://www.example.com";
+        }
+    </script>
+</body>
+</html>
